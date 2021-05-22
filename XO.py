@@ -38,3 +38,39 @@ def diagonalcrossed(grid):
         return (True)
   
     return(False)
+
+
+def entry(one,two,count):
+    # position = {'1':'grid[0][0]','2':grid[0][1], '3':grid[0][2], '4':grid[1][0], '5':grid[1][1],'6':grid[1][2],'7':grid[2][0],'8':grid[2][1],'9':grid[2][2]}
+    if gameOver(grid) == False and count == 9:
+        print("It's a draw")
+
+    elif gameOver(grid) == True:
+        if count % 2 == 1 :
+            print("Player 1 is Winner!!")
+        
+        else:
+            print("Player 2 is Winner!!")
+
+    while (gameOver(grid) == False and count != 9):
+        if count % 2 == 0: 
+            play_one = input(f"Its player 1 chance, where would you like to enter {one} :")
+            for i in range(3):
+                for j in range(3):
+                    if grid[i][j] == play_one:
+                        grid[i][j] = one
+                        count += 1
+                        print(np.matrix(grid))
+                        entry(one,two,count)
+
+
+        else :
+            play_two = input(f"Its player 2 chance, where would you like to enter {two} :")
+            for i in range(3):
+                for j in range(3):
+                    if grid[i][j] == play_two:
+                        grid[i][j] = two
+                        count += 1
+                        print(np.matrix(grid))
+                        entry(one,two,count)
+    
