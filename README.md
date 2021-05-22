@@ -8,6 +8,4 @@
   - And You are good to go!!!!
 Enjoy this was a small project from my side i hope you guys can get a clear idea.
 =======
-#commands
- - pip install numpy
->>>>>>> 5907bd6e8f378fbf5c39677fbe4da28a6b19e25f
+
