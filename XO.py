@@ -39,6 +39,10 @@ def diagonalcrossed(grid):
   
     return(False)
 
+def gameOver(grid):
+
+    return (rowcrossed(grid) or columncrossed(grid) or diagonalcrossed(grid))
+
 
 def entry(one,two,count):
     # position = {'1':'grid[0][0]','2':grid[0][1], '3':grid[0][2], '4':grid[1][0], '5':grid[1][1],'6':grid[1][2],'7':grid[2][0],'8':grid[2][1],'9':grid[2][2]}
