@@ -78,3 +78,12 @@ def entry(one,two,count):
                         print(np.matrix(grid))
                         entry(one,two,count)
     
+
+
+if __name__ == "__main__":
+    count = 0
+    print(np.matrix(grid))
+    x,y = choice()
+    print({'Player One' : x,'Player Two' : y})
+    entry(x,y,count)
+    print(np.matrix(grid))
