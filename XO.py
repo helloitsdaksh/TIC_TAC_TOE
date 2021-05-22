@@ -1,4 +1,6 @@
 import numpy as np
+import pyttsx3
+engine = pyttsx3.init()
 
 grid = [["1","2","3"], 
         ["4","5","6"],
@@ -12,6 +14,8 @@ player_two = ""
 PLAYER HAS TO DECIDE WHAT HE WANTS??
 """
 def choice():
+    engine.say("Enter Your Choice Player one, 'X' or 'O':")
+    engine.runAndWait()
     player_one = input("Enter Your Choice Player one, 'X' or 'O':")
     if player_one.upper() == "X":
         player_two = "O"
@@ -65,9 +69,15 @@ def entry(one,two,count):
     elif gameOver(grid) == True:
         if count % 2 == 1 :
             print("Player 1 is Winner!!")
+            engine.say("Player 1 is Winner!!")
+            engine.runAndWait()
+            
         
         else:
             print("Player 2 is Winner!!")
+            engine.say("Player 2 is Winner!!")
+            engine.runAndWait()
+            
 
     while (gameOver(grid) == False and count != 9):
         if count % 2 == 0: 
